@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class EconomicsCalculator {
 
-    final double internalRateOfReturnPrecision = 0.001;
+    final double internalRateOfReturnPrecision = 0.00001;
     final Printer printer = new Printer(true);
 
     public void calculate() {
@@ -123,7 +123,7 @@ public class EconomicsCalculator {
             lastNpv = npv;
             discountRate += internalRateOfReturnPrecision;
             npv = calculateNPV(cashFlows, discountRate);
-            System.out.println("" + npv + " " + discountRate);
+//            System.out.println("" + npv + " " + discountRate);
         } while (npv > 0);
         return lastDiscountRate + (discountRate - lastDiscountRate) * (lastNpv / (lastNpv + Math.abs(npv)));
     }
