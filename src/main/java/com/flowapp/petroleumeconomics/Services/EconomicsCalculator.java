@@ -21,33 +21,20 @@ public class EconomicsCalculator {
     final double internalRateOfReturnPrecision = 0.00001;
     final Printer printer = new Printer(true);
 
-    public void calculate() {
+    public void calculate(
+            final double initialProductionPerWellPerDay,
+            final double wellInitialCost,
+            final double facilitiesCost,
+            final double pipelinesCost,
+            final double oilPricePerBarrel,
+            final double upTimeFraction,
+            final double interestRatePerYear,
+            final int numberOfWells,
+            final double operatingCostPerBarrel,
+            final double abandonmentCost,
+            final double abandonmentOilRatePerWellPerDay,
+            final double declineRatePerYear) {
         printer.clear();
-        final double initialProductionPerWellPerDay = 1_600;
-        final double wellInitialCost = 7_500_000;
-        final double facilitiesCost = 35_000_000;
-        final double pipelinesCost = 15_000_000;
-        final double oilPricePerBarrel = 60;
-        final double upTimeFraction = 0.98;
-        final double interestRatePerYear = 0.10;
-        final int numberOfWells = 6;
-        final double operatingCostPerBarrel = 6;
-        final double abandonmentCost = 1_000_000;
-        final double abandonmentOilRatePerWellPerDay = 15;
-        final double declineRatePerYear = 0.35;
-
-//        final double initialProductionPerWellPerDay = 500;
-//        final double wellInitialCost = 5_000_000;
-//        final double facilitiesCost = 25_000_000;
-//        final double pipelinesCost = 20_000_000;
-//        final double oilPricePerBarrel = 60;
-//        final double upTimeFraction = 0.98;
-//        final double interestRatePerYear = 0.07;
-//        final int numberOfWells = 10;
-//        final double operatingCostPerBarrel = 4;
-//        final double abandonmentCost = 1_500_000;
-//        final double abandonmentOilRatePerWellPerDay = 10;
-//        final double declineRatePerYear = 0.157;
 
         final var wellsCost = numberOfWells * wellInitialCost;
         final var initialInvestment = facilitiesCost + pipelinesCost + wellsCost;

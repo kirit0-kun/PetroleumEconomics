@@ -16,7 +16,34 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
 //        stage.show();
-        new EconomicsCalculator().calculate();
+
+//        // Project B
+//        new EconomicsCalculator().calculate(500,
+//                5_000_000,
+//                25_000_000,
+//                20_000_000,
+//                60,
+//                0.98,
+//                0.07,
+//                10,
+//                4,
+//                1_500_000,
+//                10,
+//                0.157);
+
+        // Project A
+        new EconomicsCalculator().calculate(1_600,
+                7_500_000,
+                35_000_000,
+                15_000_000,
+                60,
+                0.98,
+                0.10,
+                6,
+                6,
+                1_000_000,
+                15,
+                0.35);
     }
 
     public static void main(String[] args) {
